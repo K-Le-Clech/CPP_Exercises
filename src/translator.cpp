@@ -13,11 +13,13 @@ int main(){
     while (true)
     {
         std::cout << "This is a translator, but it does nothing for now..." << std::endl;
-        std::cin >> chaine;
+        std::getline(std::cin, chaine);
         //if(chaine == "q" || chaine == "quit" || chaine == "e" || chaine == "exit"){
         if(exitList.find(chaine) != exitList.end()){
             break;
         }
+        
+        
     }
 
     return 0;
