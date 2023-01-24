@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <ostream>
+#include "PlushStore.hpp"
 
 class Kid{
 
@@ -17,6 +18,13 @@ class Kid{
 
         int get_money() const{
             return _money;
+        }
+
+        void buy_plush(PlushStore store){
+            auto cost = store.buy(_money);
+            if (cost != std::nullopt){
+                _money -= cost.get_cost();
+            }
         }
     
     private :
