@@ -11,7 +11,7 @@ class PlushStore{
             return _name;
         }
 
-        unsigned int get_wealth_amount() const {
+        int get_wealth_amount() const {
             return _amount;
         }
 
@@ -19,8 +19,29 @@ class PlushStore{
             return _stock;
         }
 
+        void loan(unsigned int price){
+            _amount += price;
+            _interest += price * 1.1;
+        }
+
+        unsigned int get_debt_amount() const {
+            return _interest;
+        }
+
+        void make_plush(unsigned int cost){
+            if(_amount != 0){
+                _amount -= cost;
+                _stock ++;
+                if(_amount < 0){
+                    _amount = 0;
+                }
+            }
+        }
+
     private:
         std::string _name;
-        unsigned int _amount = 0u;
+        int _amount = 0;
         unsigned int _stock = 0u;
+        unsigned int _interest = 0u;
+        int _experience = 0;
 };
