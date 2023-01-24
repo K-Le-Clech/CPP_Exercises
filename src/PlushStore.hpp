@@ -28,14 +28,26 @@ class PlushStore{
             return _interest;
         }
 
-        void make_plush(unsigned int cost){
+        int make_plush(int cost){
             if(_amount != 0){
                 _amount -= cost;
                 _stock ++;
                 if(_amount < 0){
                     _amount = 0;
                 }
+                _experience ++;
+                if( _experience >= (_experience * cost / 100)){
+                    return cost + _experience;
+                }
+                else{
+                    return cost + _experience * cost / 100;
+                }
             }
+            return 0;
+        }
+
+        int get_experience() const {
+            return _experience;
         }
 
     private:
