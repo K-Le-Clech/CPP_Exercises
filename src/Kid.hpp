@@ -22,8 +22,9 @@ class Kid{
 
         void buy_plush(PlushStore store){
             auto cost = store.buy(_money);
-            if (cost != std::nullopt){
-                _money -= cost.get_cost();
+            std::cout << store.get_wealth_amount() << std::endl;
+            if (cost.has_value()){
+                _money -= cost.value().get_cost();
             }
         }
     
