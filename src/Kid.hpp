@@ -20,9 +20,8 @@ class Kid{
             return _money;
         }
 
-        void buy_plush(PlushStore store){
+        void buy_plush(PlushStore& store){
             auto cost = store.buy(_money);
-            std::cout << store.get_wealth_amount() << std::endl;
             if (cost.has_value()){
                 _money -= cost.value().get_cost();
             }

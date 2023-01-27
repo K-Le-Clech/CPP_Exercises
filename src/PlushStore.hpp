@@ -65,7 +65,6 @@ class PlushStore{
                 return std::nullopt;
             }
             _amount += min;
-            std::cout << this->get_wealth_amount() << std::endl;
             _stock --;
             for (std::vector<int>::iterator it = array.begin(); it != array.end();)
             {
@@ -77,7 +76,6 @@ class PlushStore{
                     ++it;
                 }
             }
-            std::cout << this->get_wealth_amount() << std::endl;
             return std::optional<Plush>{min};
         }
 
