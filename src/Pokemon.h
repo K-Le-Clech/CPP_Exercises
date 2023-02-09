@@ -2,6 +2,7 @@
 
 #include <string>
 #include <string>
+#include <memory>
 
 // A creature that is cute and can fight other ones.
 class Pokemon
@@ -19,3 +20,7 @@ class Pokemon
         int _id;
 };
 
+class PokemonPtr {
+
+
+};
