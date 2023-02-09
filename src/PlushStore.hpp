@@ -4,6 +4,7 @@
 #include <vector>
 #include <algorithm>
 #include "Plush.hpp"
+#include <iostream>
 
 class PlushStore{
 
@@ -23,12 +24,12 @@ class PlushStore{
             return _stock;
         }
 
-        void loan(unsigned int price){
+        void loan(int price){
             _amount += price;
             _interest += price * 1.1;
         }
 
-        unsigned int get_debt_amount() const {
+        int get_debt_amount() const {
             return _interest;
         }
 
@@ -82,7 +83,7 @@ class PlushStore{
         std::string _name;
         int _amount = 0;
         unsigned int _stock = 0u;
-        unsigned int _interest = 0u;
+        int _interest = 0u;
         int _experience = 0;
         std::vector<int> array = {};
 };
