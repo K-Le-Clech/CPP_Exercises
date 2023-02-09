@@ -13,7 +13,6 @@ Pokemon::Pokemon(const Pokemon& other)
 Pokemon& Pokemon::operator=(const Pokemon& other){
     if(this!=&other){
         _name = other._name;
-
     }
     return *this;
 }
