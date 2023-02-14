@@ -25,7 +25,7 @@ std::string to_symbol(Attribute attr){
     }
 }
 
-class Monster : public Card{
+class Monster : public Card {
 
     public :
         Monster (const std::string& id, const std::string& name, Attribute attribute, const std::string& race, int atk, int def)

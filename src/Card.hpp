@@ -1,8 +1,5 @@
 #pragma once
 #include <string>
-#include "Monster.hpp"
-#include "Spell.hpp"
-#include "Trap.hpp"
 
 enum class CardType{
     Monster,
