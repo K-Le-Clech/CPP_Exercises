@@ -2,7 +2,7 @@
 
 #include <catch2/catch_test_macros.hpp>
 
-TEST_CASE("Stringleaf is a class that can be built from an integer.")
+TEST_CASE("Stringleaf is a class that can be built from a string.")
 {
     StringLeaf p{"Hello World"};
 }

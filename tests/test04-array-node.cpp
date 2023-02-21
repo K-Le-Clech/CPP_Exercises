@@ -2,7 +2,7 @@
 
 #include <catch2/catch_test_macros.hpp>
 
-TEST_CASE("ArrayNode is a class that can be built from an integer.")
+TEST_CASE("ArrayNode is a class that can be built.")
 {
     ArrayNode p{};
 }
