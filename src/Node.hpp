@@ -14,6 +14,4 @@ class Node : public InstanceCounter{
     public:
         virtual ~Node(){}
         virtual std::string print() const = 0;
-        static NodePtr make_ptr();
-
 };

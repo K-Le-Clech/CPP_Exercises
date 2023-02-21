@@ -20,4 +20,8 @@ class ArrayNode : public Node{
         static std::unique_ptr<ArrayNode> make_ptr(){
             return std::make_unique<ArrayNode>();
         }
+
+        int child_count(){
+            return 0;
+        }
 };
