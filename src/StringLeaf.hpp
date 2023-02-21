@@ -2,6 +2,7 @@
 #include "Leaf.hpp"
 #include "NodeKind.hpp"
 #include <string>
+#include <memory>
 
 class StringLeaf : public Leaf{
     public :
@@ -19,6 +20,10 @@ class StringLeaf : public Leaf{
 
         std::string print() const{
             return "\"" + data() + "\"";
+        }
+
+        static std::unique_ptr<StringLeaf> make_ptr(const std::string& value ){
+            return std::make_unique<StringLeaf>(value);
         }
     
     private :

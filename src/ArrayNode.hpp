@@ -1,6 +1,7 @@
 #pragma once
 #include "Node.hpp"
 #include "NodeKind.hpp"
+#include <memory>
 
 class ArrayNode : public Node{
 
@@ -14,5 +15,9 @@ class ArrayNode : public Node{
 
         std::string print() const{
             return "[]";
+        }
+
+        static std::unique_ptr<ArrayNode> make_ptr(){
+            return std::make_unique<ArrayNode>();
         }
 };
