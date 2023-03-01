@@ -23,11 +23,10 @@ class ObjectNode : public Node{
         }
 
         unsigned int child_count() const{
-            return _nb_child;
+            return _map.size();
         }
 
         void insert(std::string str, std::unique_ptr<Node> child){
-            _nb_child ++;
             _map.insert({str, std::move(child)});
         }
 
@@ -44,5 +43,4 @@ class ObjectNode : public Node{
 
     private:
         std::map<std::string, std::unique_ptr<Node>> _map = {};
-        unsigned int _nb_child = 0;
 };
