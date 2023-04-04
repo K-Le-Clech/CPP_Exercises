@@ -82,6 +82,7 @@ void f4(bool b)
 /* ========================================================================= */
 
 // Q5: What does `if constexpr` do? What does `constexpr` mean?
+//Je connais la valeur au moment de la compilation (compilateur peut calculer)
 
 /* ========================================================================= */
 bool f6()
